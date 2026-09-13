@@ -11,7 +11,7 @@ like a great way to get a deeper understanding of the 'though' process of an AI 
 <p align="center"> 
 <img src="Pictures/001-InitSetup/OllamaDownloadModel.jpg" alt="Ollama Install Qwen3"> <br> <b>Ollama installing Qwen3</b> 
 <br><br> 
-<img src="Pictures/001-InitSetup/OllamaDesktop.png" alt="Ollama Desktop"> <br> <b>Ollama Desktop !</b> 
+<img src="Pictures/001-InitSetup/OllamaDesktop.PNG" alt="Ollama Desktop"> <br> <b>Ollama Desktop !</b> 
 </p>                       
 
 5. Tried hopelessly to use /login from Pi within a powershell terminal for about 10 minutes randomly clicking through menus, until i realised the Ollama application literally justs tells you to type "ollama launch pi" and again, it just does it. Science. After launch, you choose the model - here's where you realise how stupidly easy it is to use a cheap model for grunt work, then easily switch to more heavy-duty model if more context for the task is required.
