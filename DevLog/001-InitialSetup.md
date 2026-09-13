@@ -8,27 +8,25 @@ like a great way to get a deeper understanding of the 'though' process of an AI 
 
 3. Decided on the model Qwen3-coder:7b, as it was stated to have a decent enough context window - though may be crap at tooling which I guess I'll find out later. Be careful here though, did suggest some models that I don't believe my GPU could handle, so better to err on the side of caution. At the same time switching models is comically easy, so who cares.
 4. Installed Ollama, fired up powershell for the first time and used 'ollama run qwen3-coder:7b' and then it just installed it. Which, wow. Mucked about chatting with the model as it came in the Ollama application for bit; seemed rudimentary, didn't understand much, very generic "here to help" messages. But good enough, understood English, ready to move on.
-                                <figure align="center">
-                                    <img src="Pictures/001-InitSetup/OllamaDownloadModel.jpg" alt="Ollama Install Qwen3">
-                                    <figcaption><b>Ollama installing Qwen3</b></figcaption>
-                                    <img src="Pictures/001-InitSetup/OllamaDesktop.png" alt="Ollama Desktop">
-                                    <figcaption><b>Ollama Desktop !</b></figcaption>
-                                </figure>                            
+<p align="center"> 
+<img src="Pictures/001-InitSetup/OllamaDownloadModel.jpg" alt="Ollama Install Qwen3"> <br> <b>Ollama installing Qwen3</b> 
+<br><br> 
+<img src="Pictures/001-InitSetup/OllamaDesktop.png" alt="Ollama Desktop"> <br> <b>Ollama Desktop !</b> 
+</p>                       
 
 5. Tried hopelessly to use /login from Pi within a powershell terminal for about 10 minutes randomly clicking through menus, until i realised the Ollama application literally justs tells you to type "ollama launch pi" and again, it just does it. Science. After launch, you choose the model - here's where you realise how stupidly easy it is to use a cheap model for grunt work, then easily switch to more heavy-duty model if more context for the task is required.
-                                <figure align="center">
-                                    <img src="Pictures/001-InitSetup/OllamaLaunchPi.PNG" alt = "Ollama Launch Pi">
-                                    <figcaption><b> Ollama Launches Pi</b></figcaption>
-                                    <img src="Pictures/001-InitSetup/OllamaPiModelSelection.PNG" alt = "Ollama Pi Model Selection">
-                                    <figcaption><b> Pi Prompts To Select From Available Models, Qwen3 Chosen</b></figcaption>
-                                </figure>
+<p align="center"> 
+<img src="Pictures/001-InitSetup/OllamaLaunchPi.PNG" alt="Ollama Launch Pi"> <br> <b>Ollama Launches Pi</b>
+ <br><br> <img src="Pictures/001-InitSetup/OllamaPiModelSelection.PNG" alt="Ollama Pi Model Selection"> <br> <b>Pi Prompts To Select From Available Models, Qwen3 Chosen</b>
+  </p>
+
 
 6. Tried to navigate into the new, empty unity 3D project I created for another 10 minutes, until I just decided to type "pi" into the VSCode terminal (powershell) which had the full project open. My rudimentary understanding is that after launching Pi through ollama, Pi now knows how to access the models available through Ollama, as well as the locally downloaded one. Presumably, every time you install a new model through Ollama you'd just have to type "ollama launch pi" from powershell and it'd be updated.
 7. Initial "hello !" message as industry standard, see whats what, says "hello, how can I help?" back. Bosh.
-                                <figure align="center">
-                                    <img src="Pictures/001-InitSetup/InitialisingPi.PNG" alt = "Launching Pi from VSCode">
-                                    <figcaption><b> Launching Pi Within VSCode Terminal</b></figcaption>
-                                </figure>
+<p align="center"> 
+<img src="Pictures/001-InitSetup/InitialisingPi.PNG" alt="Launching Pi from VSCode"> <br> <b>Launching Pi Within VSCode Terminal</b> 
+</p>
+
 8. Wanted to see if the model has a decent enough understanding of the project context to even warrant continuing with this project, so asked it to tell me what it sees inside the current project and give me a quick overview. Bear in mind, unity has a bunch of random config files, packages and "Tutorial" scenes in languages I've never even heard of or can begin to understand - all I wanted to see was "yup, it's a unity project !". Specifically, I asked Pi "Can you tell me what you can see inside this current project? Just a brief overview, I want to ensure everything is correctly configured", with the resulting output presented below. As an overview, it understood that it was a Unity project, and gave an explanation on what some of the files might be used for. 
 <!-- #region Terminal Output for 'Summary' -->
 <details>
@@ -209,6 +207,6 @@ like a great way to get a deeper understanding of the 'though' process of an AI 
 <!-- #endregion -->
 
 9. Now beginning to understand how essential CONTEXT is. My questions with the model in an empty environment went nowhere, but this seemed to instantly have a deeper understanding of not just the prompt but it felt smarter in general. This is something I think I had to experience this way to understand. Still a lot to learn, but still. It was quite fast, barely a minute.
-10. More to do, want to check out other things w.r.t pi dev, a lot of resources to read and different packages produced by the community to check out - which is pretty overwhelming. But to this point, I've got myself a nice little local model running inside my project directory in vscode, and it was a hell of a lot easier than I ever expected it could be. ****INSERT SCREENSHOTS!!!****
+10. More to do, want to check out other things w.r.t pi dev, a lot of resources to read and different packages produced by the community to check out - which is pretty overwhelming. But to this point, I've got myself a nice little local model running inside my project directory in vscode, and it was a hell of a lot easier than I ever expected it could be. 
 11. Worth noting that I started writing this up the day after experimentation, and when I reloaded VSCode and ran Pi again, I couldnt see the full extent of my chat history, couldn't scroll up in the terminal past a certain point. So i asked the model, hey, how do I see what I was talking about yesterday? It gave me some advice and a deeper understanding of *sessions*. Typing into the Pi terminal "/session" showed me two options, the current session of me ironically asking about sessions and "hello !" my first message from yesterday. Selecting yesterday's session reloaded everything exactly as it looked last night, enabling me to scroll all the way up to the start of the conversation. This was very impressive, can just start a new session to work on a specific targeted task, and return to that session if the task requires modification. 
 12. Next steps? I suppose just trying the base model with Pi harness and getting it do generate a script, gonna try something that I'd know how to do myself - to see how it does it. In the next devlog I'll also just ramble for unecessarily long about any issues encountered, resolutions, or insights along the way. Thanks for reading. 
